@@ -7,10 +7,12 @@ Laravel 4 Package to embed facebook comment and like plugin
 
 ##INSTALL
 
+add this line to your require array in composer.json
 
+    "totox777/fbplugins": "dev-master"
 
-
-
+and then, Run :
+`composer update` to pull down the latest version.
 
 
 add this line to your app.php provider array:
