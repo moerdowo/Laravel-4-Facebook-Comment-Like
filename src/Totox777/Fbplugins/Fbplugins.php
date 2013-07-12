@@ -30,7 +30,7 @@ class Fbplugins extends JxFacebookObject {
                     fjs.parentNode.insertBefore(js, fjs);
                }(document, \'script\', \'facebook-jssdk\'));
             </script>' ;
-            echo $script ;
+            return $script ;
         }
 
         public function loadScript ( $langTag = 'en_US' ) {
@@ -73,7 +73,7 @@ class Fbplugins extends JxFacebookObject {
             $type = $this->getOpenGraph ( 'type' , array ( 'website' ) ) ;
             $html = 'xmlns:fb = "http://ogp.me/ns/fb#"' ;
             $html .='prefix = "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# ' . $type[0] . ': http://ogp.me/ns/' . $type[0] . '# "' ;
-            echo $html ;
+            return $html ;
         }
 
         public function getHead () {
@@ -89,7 +89,7 @@ class Fbplugins extends JxFacebookObject {
             }
             $head .= '<meta property = "fb:admins" content = "' . $this->getAdmins () . '" />' . "\n" ;
             $head .= '<meta property = "fb:app_id" content = "' . $this->getAppId () . '" />' . "\n" ;
-            echo $head ;
+            return $head ;
         }
 
         public function getPlugin ( $name ) {
@@ -99,7 +99,7 @@ class Fbplugins extends JxFacebookObject {
                 $html .= 'data-' . $key . ' = "' . $value . '"' ;
             }
             $html .= '></div>' ;
-            echo $html ;
+            return $html ;
         }
 
         public function getDialog ( $dialog = 'feed' , $obj = array ( ) , $type = 'url' ) {
